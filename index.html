@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
     <meta charset='UTF-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog Project</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="script" href="js/app.js">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--<link rel="script" href="js/app.js">-->
 </head>
 
-<body class="main">
-    <header class="main-header color1">
-        <h1>title</h1>
-        <p>lorem</p>
-    </header>
-    <article>
-        <section class="color2">
-            <h2>title</h2>
-            <p>lorem</p>
-        </section>
-        <section class="color3">
-            <h3>title</h3>
-            <p>lorem</p>
-        </section>
-    </article>
-    <footer>
-        <p></p>
-    </footer>
+<body>
+    <div class="container">
+        <!--div required to create nav and see h1-->
+        <header class="hd">
+            <h1>Welcome to My Blog</h1>
+            <nav>
+                <ul class="li">
+                    <li>Keukenhof</li>
+                    <li>Versailles</li>
+                </ul>
+            </nav>
+        </header>
+        <article class="box">
+            <section>
+                <h2>Keukenhof Gardens</h2>
+                <p>Keukenhof Gardens is the world’s largest bulb-flower garden and boasts more than 800 varieties of tulips. <br>Millions of tulips are planted every year after careful planning and detailed layout, keeping in consideration all sorts of variables
+                    like color, height, petal shapes and floral sculptural shapes that can be better appreciated from above.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/J-cyVgXMJb8?start=38" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <h3>title section</h3>
+                <p>lorem section2</p>
+                <div class="ft">
+                    <p>Footer</p>
+                </div>
+            </section>
+        </article>
+    </div>
 </body>
 
 </html>
