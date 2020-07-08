@@ -1,8 +1,13 @@
 /*
+
+ask : why grid template areas does not work?
+
+
 @media 
 
-including custom images, layout, and styling. Along with webpage design considerations, you'll work to appropriately structure your files, as well as use proper CSS and HTML formatting & style.
-Directories & Files: Files are organized with a directory structure that separates files based on page and functionality.
+including custom images, layout, and styling. Along with webpage design considerations, 
+you'll work to appropriately structure your files, 
+as well as use proper CSS and HTML formatting & style.
 
 Links: user flow on each page with appropriate links as needed.
 **
@@ -13,7 +18,7 @@ img, img caption btns, card
 
 Blog Post Card
     Card
-    Image
+    Image/vid
     Buttons
 Footer
 Blog Post*
@@ -32,35 +37,82 @@ Social Sharing
 */
 
 @import './base.css';
-
-/*^ display 100%, margin*/
-
-.container {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
+@media(max-width:799px) {
+    .container {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: fit-content(600px) 1fr;
+        gap: 6px;
+        width: 100%;
+        /*grid-template-areas: "hd" "bd" "ft"*/
+    }
 }
 
-.hd {
-    flex-direction: row;
-    align-self: start;
-    justify-content: start;
+@media(min-width:800px) {
+    .container {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: fit-content(400px) 1fr;
+        grid-template-rows: 1fr, 2fr;
+        gap: 8px;
+        height: 700px;
+        /*grid-template-areas: "hd hd hd" "sb bd bd" "ft ft ft"*/
+    }
 }
 
-.ft {
-    align-items: center;
-    border: 2px solid maroon;
+@media(max-width:799px) {
+    .hd {
+        flex-direction: row;
+        align-self: start;
+        justify-content: start;
+        grid-row: auto;
+    }
 }
 
-.box {
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid green;
+@media(min-width:799px) {
+    .hd {
+        flex-direction: column;
+        align-self: start;
+        justify-content: start;
+        grid-row: auto / span 3;
+    }
+}
+
+@media(max-width:799px) {
+    .ft {
+        align-items: center;
+        grid-column: auto;
+    }
+}
+
+@media(min-width:800px) {
+    .ft {
+        align-items: center;
+        grid-column: auto / span 3;
+    }
+}
+
+@media(max-width:799px) {
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-template-rows: subgrid;
+        grid-row: auto;
+    }
+}
+
+@media(min-width:800px) {
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: subgrid;
+        grid-column: auto / span 2;
+    }
 }
 
 h1 {
