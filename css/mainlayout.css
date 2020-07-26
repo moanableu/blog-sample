@@ -1,10 +1,4 @@
 /*
-
-ask : why grid template areas does not work?
-
-
-@media 
-
 including custom images, layout, and styling. Along with webpage design considerations, 
 you'll work to appropriately structure your files, 
 as well as use proper CSS and HTML formatting & style.
@@ -17,12 +11,10 @@ Components:
 img, img caption btns, card
 
 Blog Post Card
-    Card
+    Card?
     Image/vid
     Buttons
-Footer
 Blog Post*
-Header
 Author Info
     Name
     Title
@@ -37,20 +29,25 @@ Social Sharing
 */
 
 @import './base.css';
-@media(max-width:799px) {
+@media(max-width:360px) {
     .container {
         display: grid;
-        align-items: center;
-        justify-content: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: fit-content(600px) 1fr;
+        grid-template-rows: 1fr;
         gap: 6px;
         width: 100%;
-        /*grid-template-areas: "hd" "bd" "ft"*/
+    }
+    .card {
+        display: flex;
+        grid-column: 1 / -1;
+        justify-content: start;
+        width: 100%;
+    }
+    .ft {
+        grid-column: auto;
     }
 }
 
-@media(min-width:800px) {
+@media(min-width:767px) {
     .container {
         display: grid;
         align-items: center;
@@ -59,57 +56,21 @@ Social Sharing
         grid-template-rows: 1fr, 2fr;
         gap: 8px;
         height: 700px;
-        /*grid-template-areas: "hd hd hd" "sb bd bd" "ft ft ft"*/
     }
-}
-
-@media(max-width:799px) {
-    .hd {
-        flex-direction: row;
-        align-self: start;
-        justify-content: start;
-        grid-row: auto;
-    }
-}
-
-@media(min-width:799px) {
-    .hd {
+    .nav {
         flex-direction: column;
         align-self: start;
         justify-content: start;
         grid-row: auto / span 3;
     }
-}
-
-@media(max-width:799px) {
-    .ft {
-        align-items: center;
-        grid-column: auto;
-    }
-}
-
-@media(min-width:800px) {
     .ft {
         align-items: center;
         grid-column: auto / span 3;
     }
-}
-
-@media(max-width:799px) {
-    .box {
+    .card {
         display: flex;
         align-items: center;
-        justify-content: center;
-        grid-template-rows: subgrid;
-        grid-row: auto;
-    }
-}
-
-@media(min-width:800px) {
-    .box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        justify-content: start;
         grid-template-columns: subgrid;
         grid-column: auto / span 2;
     }
@@ -117,29 +78,26 @@ Social Sharing
 
 h1 {
     font-size: 12px;
-    margin-bottom: 0.1%;
-    padding-top: 0.2%;
-    padding-bottom: 0.1%;
     align-items: center;
+    margin: 2%;
 }
 
-p {
-    font-size: 12px;
-    margin-bottom: 0.1%;
-    padding-top: 0.1%;
-    padding-bottom: 0.1%;
-    border: 2px solid hotPink;
+.card h2 {
+    text-align: start;
+    margin: 0;
+    padding: 2%;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
 }
 
 .footer {
     width: 100%;
-    font-size: 12px;
+    font-size: 10px;
     text-align: start;
-}
-
-.divider {
-    height: 1px;
-    color: #888
 }
 
 .color2 {
@@ -150,9 +108,4 @@ p {
 .color3 {
     background-color: #aeea00;
     color: #362a1a;
-}
-
-.li {
-    list-style: none;
-    font-size: small;
 }

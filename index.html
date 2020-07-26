@@ -6,33 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog Project</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <!--<link rel="script" href="js/app.js">-->
 </head>
 
 <body>
     <div class="container">
-        <!--div required to create nav and see h1-->
-        <header class="hd">
-            <h1>Welcome to My Blog</h1>
+        <header class="nav">
+            <h1 class="h1">Another Travel Blog</h1>
             <nav>
                 <ul class="li">
-                    <li>Keukenhof</li>
+                    <li><a href="blog.html">Keukenhof</a></li>
                     <li>Versailles</li>
                 </ul>
             </nav>
         </header>
-        <article class="box">
-            <section>
+        <article class="card">
+            <section id="card1">
                 <h2>Keukenhof Gardens</h2>
-                <p>Keukenhof Gardens is the world’s largest bulb-flower garden and boasts more than 800 varieties of tulips. <br>Millions of tulips are planted every year after careful planning and detailed layout, keeping in consideration all sorts of variables
+                <p class="p">Keukenhof Gardens is the world’s largest bulb-flower garden and boasts more than 800 varieties of tulips. <br>Millions of tulips are planted every year after careful planning and detailed layout, keeping in consideration all sorts of variables
                     like color, height, petal shapes and floral sculptural shapes that can be better appreciated from above.</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/J-cyVgXMJb8?start=38" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div id="Keukenhof-button"><button class="btn"><a href="blog.html">Read more</a></button></div>
+                <div id="Keukenhof-media">
+                    <iframe class="media justify" width="560" height="315" alt="Violinist Rosanne Philippens performs at Keukenhof" src="https://www.youtube.com/embed/J-cyVgXMJb8?start=38" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></div>
             </section>
         </article>
-        <article class="box">
-            <section>
-                <h3>title section</h3>
-                <p>lorem section2</p>
+        <article class="card">
+            <section id="card2">
+                <h2>Palace of Versailles</h2>
+                <p class="p">The Palace of Versailles, whose origins date back to the seventeenth century, was successively a hunting lodge, a ​seat of power and​,​ from the nineteenth century​,​ a museum. With the gardens and the ​​Palaces of Trianon, the park of
+                    the Château de Versailles spreads over 800 hectares.</p>
+                <div id="Versailles-button"><button class="btn">Read more</button></div>
+                <div id="Versailles-media">
+                    <img class="media justify" width="560" height="315" alt="The Hall of Mirrors, main view" src="images/Versailles.jpg" /></div>
             </section>
         </article>
         <div class="ft">
