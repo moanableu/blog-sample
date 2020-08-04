@@ -1,16 +1,24 @@
-.img-sidebar {
-    width: 20px;
-    height: 20px;
-    margin: 0;
-    padding: 0;
-    background-size: contain;
+.home-media {
+    display: grid;
+    place-items: center;
+    padding: 4px;
 }
 
-.img-post {
-    width: 70%;
-    height: 40%;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-position: center left;
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.child {
+    flex: 1 1 550px;
+    margin: 4px;
+}
+
+.justify {
+    margin: 10px;
+}
+
+.visual {
+    aspect-ratio: 16/9;
 }

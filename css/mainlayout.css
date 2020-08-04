@@ -1,0 +1,62 @@
+@import './base.css';
+.container {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    grid-template-rows: repeat(auto-fit, min-max(700px, 1fr));
+}
+
+@media(max-width:360px) {
+    .card {
+        display: flex;
+        justify-content: start;
+        flex: auto;
+    }
+    .ft {
+        grid-column: auto / span 2;
+    }
+}
+
+@media(min-width:767px) {
+    .nav {
+        flex-direction: column;
+        align-self: start;
+        justify-content: start;
+        grid-row: auto / span 3;
+    }
+    .ft {
+        grid-column: auto / span 3;
+    }
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        grid-template-columns: subgrid;
+        grid-column: auto / span 2;
+    }
+}
+
+h1 {
+    font-size: 12px;
+    align-items: center;
+    margin: 2%;
+    padding: 4px;
+}
+
+.card h2 {
+    text-align: start;
+    margin: 0;
+    padding: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+    line-height: 1.6;
+}
+
+.footer {
+    font-size: x-small;
+    text-align: center;
+}
