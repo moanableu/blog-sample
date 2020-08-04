@@ -1,0 +1,118 @@
+@import './base.css';
+@media(max-width:799px) {
+    .container {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: fit-content(600px) 1fr;
+        gap: 6px;
+        width: 100%;
+    }
+}
+
+@media(min-width:800px) {
+    .container {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: fit-content(400px) 1fr;
+        grid-template-rows: 1fr, 2fr;
+        gap: 8px;
+        height: 700px;
+    }
+}
+
+@media(max-width:799px) {
+    .hd {
+        flex-direction: row;
+        align-self: start;
+        justify-content: start;
+        grid-row: auto;
+    }
+}
+
+@media(min-width:799px) {
+    .hd {
+        flex-direction: column;
+        align-self: start;
+        justify-content: start;
+        grid-row: auto / span 3;
+    }
+}
+
+@media(max-width:799px) {
+    .ft {
+        align-items: center;
+        grid-column: auto;
+    }
+}
+
+@media(min-width:800px) {
+    .ft {
+        align-items: center;
+        grid-column: auto / span 3;
+    }
+}
+
+@media(max-width:799px) {
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-template-rows: subgrid;
+        grid-row: auto;
+    }
+}
+
+@media(min-width:800px) {
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: subgrid;
+        grid-column: auto / span 2;
+    }
+}
+
+h1 {
+    font-size: 12px;
+    margin-bottom: 0.1%;
+    padding-top: 0.2%;
+    padding-bottom: 0.1%;
+    align-items: center;
+}
+
+p {
+    font-size: 12px;
+    margin-bottom: 0.1%;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    border: 2px solid hotPink;
+}
+
+.footer {
+    width: 100%;
+    font-size: 12px;
+    text-align: start;
+}
+
+.divider {
+    height: 1px;
+    color: #888
+}
+
+.color2 {
+    background-color: #5d4037;
+    color: #f7ddb5;
+}
+
+.color3 {
+    background-color: #aeea00;
+    color: #362a1a;
+}
+
+.li {
+    list-style: none;
+    font-size: small;
+}

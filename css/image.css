@@ -1,19 +1,24 @@
-@media(max-width:360px) {
-    .media {
-        display: flex;
-        gap: 0;
-    }
+.home-media {
+    display: grid;
+    place-items: center;
+    padding: 4px;
 }
 
-@media(min-width:768px) {
-    .media {
-        display: flexbox;
-        align-items: center;
-        justify-content: center;
-    }
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.child {
+    flex: 1 1 550px;
+    margin: 4px;
 }
 
 .justify {
     margin: 10px;
-    padding: 0px;
+}
+
+.visual {
+    aspect-ratio: 16/9;
 }
